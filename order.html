@@ -1,0 +1,158 @@
+<!--
+Alexis Westbrook 
+Due Date: 04/20/2025
+Assignment Number: 4
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Westbrook: Assignment 4</title>
+	<style>
+		nav ul {
+			list-style-type: none; /* Remove bullets */
+			padding: 0; /* Remove default padding*/
+			margin: 0; /* Remove default margin */
+			display: flex; /*Use flexbox to align items horizontally */
+			}
+			nav li {
+				margin-right: 20px; /* Add space betwen items */
+				}
+				nav a {
+					text-decoration: none; /* Remove underline from links */
+					color: blue; /* Set link color*/
+					}
+					nav a:hover {
+					text-decoration: underline; /* Underline links on hover */
+					}
+				form fieldset {
+					margin-bottom: 20px;
+				}
+				form fieldset div {
+					display: flex;
+					flex-wrap: wrap;
+					margin-bottom: 10px;
+					}
+	</style>
+	<link rel="stylesheet" href="amuse_styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+		<img src="images/logo.png" alt="Park Logo" style="width: 300px; height: auto;">
+		<h1>EAT, DRINK AND PLAY GAMES AT Wacky Wayne's</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="rides/attractions.html">Rides & Attractions</a></li>
+				<li><a href="info.html">Park Info</a></li>
+				<li><a href="order.html">Order Tickets</a></li>
+				<li><a href="#upcoming-events">Upcoming Events</a></li>
+				<li><a href="#related-park-news">Related Park News</a></li>
+			</ul>
+		</nav>
+</header>
+<main>
+<h2>Order Tickets</h2>
+	<form id="ticketForm" action="formProcessor.html" onsubmit="return orderTics(event);">
+<fieldset>
+	<legend>Personal Information</legend>
+	<label for="firstName">First Name:</label>
+	<input type="text" id="firstName" name="firstName" required>
+	<br>
+	<label for="lastName">Last Name:</label>
+	<input type="text" id="lastName" name="lastName" required>
+	<br>
+	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" required>
+	<br>
+	<label for="phone">Phone:</label>
+	<input type="tel" id="phone" name="phone" required>
+	<br>
+	<label for="age">Age:</label>
+	<input type="number" id="age" name="age" min="1" max="100" required>
+</fieldset>
+<fieldset>
+	<legend>Ticket Information</legend>
+	<label for="ticketQuantity">Number of Ticket:</label>
+	<select id="ticketQuantity" name="ticketQuantity" required>
+		<option value="">Select quantity</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+	</select>
+	<br>
+	<label for="donation"> How much do want to donate to the park?</label>
+	<input type="range" id="donation" name="donation" min="1" max="100" step="3">
+	<br>
+	<label>Order Add-ons:</label>
+	<div>
+	<br>
+	<input type="checkbox" id="addon1" name="addon1" value="Fast Pass" checked>
+	<label for="addon1">Fast Pass</label>
+	<br>
+	</div>
+	<div>
+	<input type="checkbox" id="addon2" name="addon2" value="Meal Voucher" checked>
+	<label for="addon2">Meal Voucher</label>
+	<br>
+	</div>
+	<div>
+	<input type="checkbox" id="addon3" name="addon3" value="Photo Package">
+	<label for="addon3">Photo Package</label>
+	<br>
+	</div>
+	<div>
+	<input type="checkbox" id="addon4" name="addon4" value="VIP Access">
+	<label for="addon4">VIP Access</label>
+	</div>
+	<br>
+</fieldset>
+<fieldset>
+	<legend> Delivery Information</legend>
+	<label for="deliveryDate">Delivery Date:</label>
+	<input type="date" id="deliveryDate" name="deliveryDate">
+	<p> <strong>Delivery Methods:</strong></p>
+	<div class="delivery-options">
+	<div>
+	<input type="radio" id="deliveryMethodEmail" name="deliveryMethod" value="email">
+	<label for="deliveryMethodEmail">Email</label><br>
+	<input type="radio" id="deliveryMethodText" name="deliveryMethod" value="text">
+	<label for="deliveryMethodText">Text</label><br>
+	<input type="radio" id="deliveryMethodMail" name="deliveryMethod" value="mail">
+	<label for="deliveryMethodMail">Mail</label>
+	</div>
+	<div>
+	<input type="radio" id="deliveryMethodDigital" name="deliveryMethod" value="digital">
+	<label for="deliveryMethodDigital">Digital Download</label><br>
+	<input type="radio" id="deliveryMethodApplePay" name="deliveryMethod" value="applePay">
+	<label for="deliveryMethodApplePay">Apple Pay</label><br>
+	<input type="radio" id="deliveryMethodGooglePay" name="deliveryMethod" value="googlePay">
+	<label for="deliveryMethodGooglePay">Google Pay</label>
+	</div>
+	</div>
+</fieldset>
+<fieldset>
+	<legend>Payment Information</legend>
+	<label for="cardNumber">Card Number:</label>
+	<input type="text" id="cardNumber" name="cardNumber" required>
+	<label for="expirationDate">Expiration Date:</label>
+	<input type="month" id="expirationDate" name="expirationDate" required>
+	<label for="cvv">CVV:</label>
+	<input type="text" id="cvv" name="cvv" required>
+</fieldset>
+	<button type="submit">Order Ticket!</button>
+</form>
+</main>
+<footer>
+	<p>&copy; 2025, Due Date: April 2nd, 2025, <a href="aw42445@georgiasouthern.edu">aw42445@georgiasouthern.edu</a></p>
+</footer>
+	</div>
+	<script src="amuse_script.js"></script>
+</body>
+</html>

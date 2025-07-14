@@ -1,0 +1,129 @@
+<!--
+Alexis Westbrook 
+Due Date: 04/20/2025
+Assignment Number: 4
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Westbrook: Assignment 4</title>
+	<style>
+		nav ul {
+			list-style-type: none; /* Remove bullets */
+			padding: 0; /* Remove default padding*/
+			margin: 0; /* Remove default margin */
+			display: flex; /*Use flexbox to align items horizontally */
+			}
+			nav li {
+				margin-right: 20px; /* Add space betwen items */
+			}
+			nav a {
+					text-decoration: none; /* Remove underline from links */
+					color: blue; /* Set link color*/
+			}
+			nav a:hover {
+					text-decoration: underline; /* Underline links on hover */
+			}
+			table {
+				border-collapse: collapse; /* Collapse borders */
+				width: 100%;/*Set table width */
+			}
+			th, td {
+				border: 1px solid black; /* Add border */
+				padding: 8px; /* Add padding*/
+				text-align: left; /*Align text to the left */
+			}		
+	</style>
+	<link rel="stylesheet" href="amuse_styles.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<img src="images/logo.png" alt="Park Logo" style="width: 300px; height: auto;">
+			<h1>EAT, DRINK AND PLAY GAMES AT Wacky Wayne's</h1>
+			<nav>
+				<ul>
+					<li><a href="index1.html">Home</a></li>
+					<li><a href="rides/attractions.html">Rides & Attractions</a></li>
+					<li><a href="info.html">Park Info</a></li>
+					<li><a href="order.html">Order Tickets</a></li>
+					<li><a href="#upcoming-events">Upcoming Events</a></li>
+					<li><a href="#related-park-news">Related Park News</a></li>
+				</ul>
+			</nav>
+		</header>
+<main>
+	<hr>
+	<h2>Ride Information</h2>
+	<table>
+		<caption> * All Amusement Rides close 15 Minutes before the Park closes</caption>
+		<tr>
+			<th>Ride</th>
+			<th>Height Restriction</th>
+			<th>Thrill Level</th>
+			<th>Duration</th>
+		</tr>
+		<tr>
+			<td>
+			<span onclick="rideInfo('TLT', 'The Loop and Twirl')" style="cursor:pointer; text-decoration:underline;">
+			The Loop and Twirl
+			</span>
+			</td>
+			<td>50 Inches</td>
+			<td>Level 10</td>
+			<td>5 Minutes</td>
+		</tr>
+		<tr>
+			<td>
+			<span onclick= "rideInfo('TLR', 'The Last Ride')" style="cursor:pointer; text-decoration:underline;">
+			The Last Ride
+			</span>
+			</td>
+			<td>48 Inches</td>
+			<td>Level 6</td>
+			<td>3 Minutes 30 Seconds</td>
+		</tr>
+		<tr>
+			<td> 
+			<span onclick= "rideInfo ('WWC', 'Wacky Wayne\'s Winding Carousel')" style="cursor:pointer; text-decoration:underline;">
+			Wacky Wayne's Winding Carousel
+			</span>
+			</td>
+			<td>36 Inches</td>
+			<td>Level 3</td>
+			<td>6 Minutes</td>
+		</tr>
+		<tr>
+			<td>
+			<span onclick= "rideInfo ('TDZ', 'The Dropzone')" style="cursor:pointer; text-decoration: underline;">
+			The Dropzone
+			</span>
+			</td>
+			<td>48 Inches</td>
+			<td>Level 10</td>
+			<td>3 Minutes</td>
+		</tr>
+		<tr>
+			<td>
+			<span onclick= "rideInfo ('WWF', 'Wacky Wayne\'s Feris Wheel')" style="cursor:pointer; text-decoration:underline;">
+			Wacky Wayne's Feris Wheel
+			</span>
+			</td>
+			<td>36 inches</td>
+			<td>Level 3</td>
+			<td>5 Minutes 30 Seconds</td>
+		</tr>
+	</table>
+</main>
+<footer>
+	<p>&copy; 2025,Due Date: April 2nd, 2025,<a href="aw42445@georgiasouthern.edu">aw42445@georgiasouthern.edu</a></p>
+</footer>
+</div>
+<script src="amuse_script.js"></script>
+</body>
+</html>	
+	
+	
+		
